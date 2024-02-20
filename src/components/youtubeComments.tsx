@@ -49,16 +49,20 @@ function YouTubeComments() {
         ))}
       </ul>
       {commentReplies.length > 0 ? (
-        <p className="font-semibold">Reply comment</p>
+        <>
+          <p className="font-semibold">Reply comments</p>
+          <ul>
+            {commentReplies.map((item: any, i) => (
+              <li key={item.id}>
+                {i + 1}.&nbsp;
+                {item.replies.comments[0].snippet.textDisplay}
+              </li>
+            ))}
+          </ul>
+        </>
       ) : (
         ""
       )}
-      {commentReplies.map((item: any, i) => (
-        <li key={item.id}>
-          {i + 1}.&nbsp;
-          {item.replies.comments[0].snippet.textDisplay}
-        </li>
-      ))}
     </>
   );
 }
