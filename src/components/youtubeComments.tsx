@@ -7,7 +7,7 @@ function YouTubeComments() {
   const [comments, setComments] = useState([]);
   const [commentReplies, setcommentReplies] = useState([]);
 
-  const [videoId, setVideoId] = useState("ihcE3aLoAEo");
+  const [videoId, setVideoId] = useState("");
 
   const apikey = process.env.NEXT_PUBLIC_API_URL;
 
